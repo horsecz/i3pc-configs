@@ -67,6 +67,8 @@ Compton effects, terminal:
 ![Compton-Terminal](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/terminal-compton.png?raw=true)
 Wallpaper, background:
 ![Wallpaper](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/wallpaper-bg.png?raw=true)
+tty-clock:
+![Clock](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/clock.png?raw=true)
 
 # Installation
 1) Copy i3, polybar & compton.conf to .config folder
