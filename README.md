@@ -58,9 +58,13 @@ Can be edited / removed in 'i3/config' file (last 30 lines).
 Reboot to Windows OS option is connected to 'winreboot' command on my laptop. (script that set ups next boot to Windows 10 and reboots) Recommened to remove this option if you dont have this command. (i3/config -> last 20 lines)
 
 # Screenshots
+Polybar bar:
 ![Bar](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/polybar.png?raw=true)
+Gaps, basic usage:
 ![Gaps](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/gaps-usage.png?raw=true)
+Compton effects, terminal:
 ![Compton-Terminal](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/terminal-compton.png?raw=true)
+Wallpaper, background:
 ![Wallpaper](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/wallpaper-bg.png?raw=true)
 
 # Installation
