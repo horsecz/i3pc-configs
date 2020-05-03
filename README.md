@@ -3,20 +3,25 @@ My i3, polybar &amp; compton config files and scripts.
 Guess this is version 1.0, somehow stable.
 
 # Tested on
-MANJARO Linux 20, KDE preinstalled
-Acer Swift 3, 14" (SF1314-52G-54HC) -> Intel Core i5-8250U, Intel UHD Graphics 620 + nVidia GeForce MX150
+- MANJARO Linux 20, KDE preinstalled
+- Acer Swift 3, 14" (SF1314-52G-54HC) -> Intel Core i5-8250U, Intel UHD Graphics 620 + nVidia GeForce MX150
 
 # Features
-Terminal: i3-sensible-terminal (xfce4-terminal)
-Autostart most used apps on special workspaces: Discord, Brave, Thunderbird.
-Autostart tty-clock & cava on workspace 10.
-Autostart terminal on workspace 1.
-Autostart autorun.sh script.
-Screenshot with 'Spectacle' (KDE app).
-Somehow fixed screen tearing with compton.
-Removed window borders & removed default i3 bar.
-i3-gaps look.
-Lockscreen & lock mode (Mod+O -> lock, shutdown, reboot, reboot to Windows OS [may not be available])
+- Terminal: i3-sensible-terminal (xfce4-terminal)
+- Autostart most used apps on special workspaces: Discord, Brave, Thunderbird.
+- Autostart tty-clock & cava on workspace 10.
+- Autostart terminal on workspace 1.
+- Autostart autorun.sh script.
+- Screenshot with 'Spectacle' (KDE app).
+- Somehow fixed screen tearing with compton.
+- Removed window borders & removed default i3 bar.
+- i3-gaps look.
+- Lockscreen & lock mode (Mod+O -> lock, shutdown, reboot, reboot to Windows OS [may not be available])
+- The best polybar ever
+    - dark mode friendly
+    - brightness, volume, battery, WLAN & bluetooth status
+    - RAM / swap usage, CPU usage & temp
+    - time
 
 # Bugs
 Cava autostarts only rarely
@@ -53,10 +58,10 @@ Can be edited / removed in 'i3/config' file (last 30 lines).
 Reboot to Windows OS option is connected to 'winreboot' command on my laptop. (script that set ups next boot to Windows 10 and reboots) Recommened to remove this option if you dont have this command. (i3/config -> last 20 lines)
 
 # Screenshots
-![Bar](https://github.com/horsecz/i3pc-configs/tree/master/screenshots/polybar.png)
-![Gaps](https://github.com/horsecz/i3pc-configs/tree/master/screenshots/gaps-usage.png)
-![Compton-Terminal](https://github.com/horsecz/i3pc-configs/tree/master/screenshots/terminal-compton.png)
-![Wallpaper](https://github.com/horsecz/i3pc-configs/tree/master/screenshots/wallpaper-bg.png)
+![Bar](https://github.com/horsecz/i3pc-configs/tree/master/screenshots/polybar.png?raw=true)
+![Gaps](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/gaps-usage.png?raw=true)
+![Compton-Terminal](https://github.com/horsecz/i3pc-configs/tree/master/screenshots/terminal-compton.png?raw=true)
+![Wallpaper](https://github.com/horsecz/i3pc-configs/tree/master/screenshots/wallpaper-bg.png?raw=true)
 
 # Installation
 1) Copy i3, polybar & compton.conf to .config folder
