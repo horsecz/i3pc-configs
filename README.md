@@ -45,23 +45,23 @@ Cava autostarts only rarely
     - file named 'active' in /home/XXX/Pictures/Wallpapers (can be edited, not needed necessary)
     
 # Wallpaper
-Default wallpaper file name: 'active'
-Default wallpaper path: '/home/XXX/Pictures/Wallpapers'
-Can be edited in 'i3/config' file (somewhere in first 30 lines)
+- Default wallpaper file name: 'active'
+- Default wallpaper path: '/home/XXX/Pictures/Wallpapers'
+- Can be edited in 'i3/config' file (somewhere in first 30 lines)
 
 # Autorun.sh
-Located in /h_sys.
-Script that autoruns always when i3 starts up, related to OS & my laptop (turn off swap, autoupdate, mount partitions..)
+- Located in /h_sys.
+- Script that autoruns always when i3 starts up, related to OS & my laptop (turn off swap, autoupdate, mount partitions..)
 Can be edited / removed in 'i3/config' file (last 30 lines).
 
 # Lock mode (Mod+O)
 Reboot to Windows OS option is connected to 'winreboot' command on my laptop. (script that set ups next boot to Windows 10 and reboots) Recommened to remove this option if you dont have this command. (i3/config -> last 20 lines)
 
 # Screenshots
-![Bar](https://github.com/horsecz/i3pc-configs/tree/master/screenshots/polybar.png?raw=true)
+![Bar](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/polybar.png?raw=true)
 ![Gaps](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/gaps-usage.png?raw=true)
-![Compton-Terminal](https://github.com/horsecz/i3pc-configs/tree/master/screenshots/terminal-compton.png?raw=true)
-![Wallpaper](https://github.com/horsecz/i3pc-configs/tree/master/screenshots/wallpaper-bg.png?raw=true)
+![Compton-Terminal](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/terminal-compton.png?raw=true)
+![Wallpaper](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/wallpaper-bg.png?raw=true)
 
 # Installation
 1) Copy i3, polybar & compton.conf to .config folder
