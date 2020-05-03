@@ -26,6 +26,7 @@ Guess this is version 1.0, somehow stable.
 # Bugs
 - Cava autostarts only rarely
 - BT status on polybar shows 'off' only when BT service is stopped (not BT itself)
+- Absoulte paths in configs (recommended to check configs and edit them)
 
 # Prerequisites
 - Linux OS
