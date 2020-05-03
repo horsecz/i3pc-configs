@@ -116,7 +116,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "clock"
 
 # switch to workspace
 bindsym $mod+plus workspace number $ws1
@@ -128,7 +128,7 @@ bindsym $mod+zcaron workspace number $ws6
 bindsym $mod+yacute workspace number $ws7
 bindsym $mod+aacute workspace number $ws8
 bindsym $mod+iacute workspace number $ws9
-bindsym $mod+eacute workspace number $ws10
+bindsym $mod+eacute workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+plus move container to workspace number $ws1
@@ -140,7 +140,7 @@ bindsym $mod+Shift+zcaron move container to workspace number $ws6
 bindsym $mod+Shift+yacute move container to workspace number $ws7
 bindsym $mod+Shift+aacute move container to workspace number $ws8
 bindsym $mod+Shift+iacute move container to workspace number $ws9
-bindsym $mod+Shift+eacute move container to workspace number $ws10
+bindsym $mod+Shift+eacute move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -194,7 +194,8 @@ no_focus [class="plasmashell" window_type="notification"]
 no_focus [class="plasmashell" window_type="on_screen_display"]
 
 # screenshot
-bindcode 107 exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+#bindcode 107 exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindcode 107 exec spectacle
 
 # most used apps - bind at =, ´, -
 assign [class="Thunderbird"] email
@@ -203,6 +204,17 @@ assign [class="Brave"] browser
 bindcode $mod+34 workspace browser
 assign [class="discord"] discord
 bindcode $mod+20 workspace discord
+
+# widget ws '10'
+assign [class="Xfce4-terminal" title="autost-ttyclock"] clock
+assign [class="Xfce4-terminal" title="autost-cava"] clock
+
+exec i3-msg 'layout splith'
+exec i3-sensible-terminal -T autost-cava -e 'cava'
+exec sleep 3
+exec i3-sensible-terminal -T autost-ttyclock -e "tty-clock -s -n -c -C 3 -b -f '%d.%B %Y'"
+#exec sleep 1
+#exec i3-msg 'workspace 1'
 
 # run terminal at bootup
 exec i3-sensible-terminal
@@ -232,3 +244,36 @@ exec_always --no-startup-id /home/horse/.config/polybar/launch.sh
 
 # remove window borders
 for_window [class="^.*"] border pixel 0
+
+# autorun from h_sys
+exec /h_sys/autorun.sh
+
+# bind keys for brightness
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
+
+# KDE notifications edit
+for_window [class="kdialog" window_type="notification"] floating enable, border none, move position 700px 450px
+no_focus [class="plasmashell" window_type="notification"] 
+
+# lockscreen
+bindsym $mod+o mode "$lock"
+set $lock Lock mode: [l]ock [s]hutdown [r]eboot [w]inreboot [q]uit
+
+mode "$lock" {
+	bindsym l exec /home/horse/.config/i3/i3lock.sh, mode "default"
+	bindsym s exec shutdown now
+	bindsym r exec reboot
+	bindsym w exec winreboot
+
+	bindsym q mode "default"
+}
+
+# radluys gaps trick
+gaps inner 8
+gaps outer 2
+smart_gaps on
+
+# notifications (fix apps freeze and some nice notifys)
+exec --no-startup-id dunst
+
