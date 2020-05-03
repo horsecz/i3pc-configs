@@ -9,7 +9,7 @@ Guess this is version 1.0, somehow stable.
 # Features
 - Terminal: i3-sensible-terminal (xfce4-terminal)
 - Autostart most used apps on special workspaces: Discord, Brave, Thunderbird.
-- Autostart tty-clock & cava on workspace 10.
+- Autostart tty-clock & cava on workspace 10 (renamed to 'clock').
 - Autostart terminal on workspace 1.
 - Autostart autorun.sh script.
 - Screenshot with 'Spectacle' (KDE app).
@@ -24,7 +24,8 @@ Guess this is version 1.0, somehow stable.
     - time
 
 # Bugs
-Cava autostarts only rarely
+- Cava autostarts only rarely
+- BT status on polybar shows 'off' only when BT service is stopped (not BT itself)
 
 # Prerequisites
 - Linux OS
