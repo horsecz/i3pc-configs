@@ -418,7 +418,7 @@ format-disconnected-foreground = #0430AB
 label-disconnected = no network
 label-disconnected-foreground = #555
 
-ramp-signal-0 = 0%
+ramp-signal-0 = 1%
 ramp-signal-0-foreground = #0a5544
 ramp-signal-1 = 25%
 ramp-signal-1-foreground = #0a7777
