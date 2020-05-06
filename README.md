@@ -14,9 +14,16 @@ Guess this is version 1.0, somehow stable.
 - Autostart autorun.sh script.
 - Screenshot with 'Spectacle' (KDE app).
 - Somehow fixed screen tearing with compton.
-- Removed window borders & removed default i3 bar.
-- i3-gaps look.
-- Lockscreen & lock mode (Mod+O -> lock, shutdown, reboot, reboot to Windows OS [may not be available])
+- i3 features:
+    - Set brigthness with fn+brg up / brg down key
+        - 0 - 100%, 1 keypress = +/-10%
+    - Set volume with fn+vol up/ vol down key
+        - 0 - 130%, 1 keypress = +/-10%
+        - volume limit at 130% (can be edited in polybar/audio-protect.sh -> without this limit it's unlimited!)
+        - mute volume with fn+vol mute key (muted sound is indicated in polybar)
+    - Removed window borders & removed default i3 bar.
+    - i3-gaps look
+    - Lockscreen & lock mode (Mod+O -> lock, shutdown, reboot, reboot to Windows OS [may not be available])
 - The best polybar ever
     - dark mode friendly
     - brightness, volume, battery, WLAN & bluetooth status
