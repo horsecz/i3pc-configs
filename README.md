@@ -33,7 +33,13 @@ Guess this is version 1.0, somehow stable.
 # Bugs
 - Cava autostarts only rarely
 - BT status on polybar shows 'off' only when BT service is stopped (not BT itself)
-- Absoulte paths in configs (recommended to check configs and edit them)
+- Absoulte paths & things related to my device-only in configs (recommended to check configs and edit them):
+    - RAM @ polybar: script which checks for swap usage has absoulte path to MY swap partition (polybar/swap.sh)
+    - VOL @ polybar: probably may work (or not), related to exact device(s) (Laptop speakers & headset) (polybar/audio.sh)
+    - VOL @ polybar: audio protect has same "problem" as line upper (polybar/audio_protect.sh)
+    - WLAN @ polybar: WLAN device (interface) name may differ (edit polybar/config -> [module/wlan]; interface = XXX)
+        - can obtain from 'ip link show' command
+    - i3: recommended check i3 config file because of wallpaper (abs. path), most used apps (may not be installed on ur device), ...
 
 # Prerequisites
 - Linux OS
