@@ -71,14 +71,6 @@ scroll-down = i3wm-wsprev
 
 
 
-[module/media]
-type = custom/script  
-exec = ~/.config/polybar/mediacontrol.py
-scroll-up = ~/.config/polybar/mediacontrol.py --volume 1
-scroll-down = ~/.config/polybar/mediacontrol.py --volume -1 
-interval = 0.1
-
-
 
 [module/volume-en]
 type = custom/script
@@ -531,9 +523,10 @@ label-full-foreground = ${colors.foreground}
 format-full-foreground = #0A81F5
 format-full-underline = #000000
 
-ramp-capacity-0 = " "
-ramp-capacity-1 = " "
 ramp-capacity-2 = " "
+ramp-capacity-1 = " "
+ramp-capacity-0 = " low  "  
+ramp-capacity-0-foreground = #FF0000
 ramp-capacity-foreground = ${colors.foreground}
 
 animation-charging-0 = " "

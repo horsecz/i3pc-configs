@@ -3,7 +3,7 @@ My i3, polybar &amp; compton config files and scripts.
 Guess this is version 1.0, somehow stable.
 
 # Tested on
-- MANJARO Linux 20, KDE preinstalled
+- Arch Linux, with i3 WM
 - Acer Swift 3, 14" (SF1314-52G-54HC) -> Intel Core i5-8250U, Intel UHD Graphics 620 + nVidia GeForce MX150
 
 # Features
@@ -11,15 +11,16 @@ Guess this is version 1.0, somehow stable.
 - Autostart most used apps on special workspaces: Discord, Brave, Thunderbird.
 - Autostart tty-clock & cava on workspace 10 (renamed to 'clock').
 - Autostart terminal on workspace 1.
-- Autostart autorun.sh script.
-- Screenshot with 'Spectacle' (KDE app).
+- Screenshot with 'scrot'.
 - Somehow fixed screen tearing with compton.
+- Battery:
+    - polybar will indicate when battery is low
+    - i3 will notify and shut down laptop when battery has <=5% battery
 - i3 features:
     - Set brigthness with fn+brg up / brg down key
         - 0 - 100%, 1 keypress = +/-10%
     - Set volume with fn+vol up/ vol down key
         - 0 - 130%, 1 keypress = +/-10%
-        - volume limit at 130% (can be edited in polybar/audio-protect.sh -> without this limit it's unlimited!)
         - mute volume with fn+vol mute key (muted sound is indicated in polybar)
     - Removed window borders & removed default i3 bar.
     - i3-gaps look
@@ -31,7 +32,7 @@ Guess this is version 1.0, somehow stable.
     - time
 
 # Bugs
-- Cava autostarts only rarely
+- BT status at polybar doesnt work now (TODO someday)
 - BT status on polybar shows 'off' only when BT service is stopped (not BT itself)
 - Absoulte paths & things related to my device-only in configs (recommended to check configs and edit them):
     - RAM @ polybar: script which checks for swap usage has absoulte path to MY swap partition (polybar/swap.sh)
@@ -57,17 +58,12 @@ Guess this is version 1.0, somehow stable.
     - pulseaudio
     - bluetoothctl
 - nice looking wallpaper:
-    - file named 'active' in /home/XXX/Pictures/Wallpapers (can be edited, not needed necessary)
+    - file named 'active' in your home folder (can be edited, not needed necessary)
     
 # Wallpaper
 - Default wallpaper file name: 'active'
-- Default wallpaper path: '/home/XXX/Pictures/Wallpapers'
+- Default wallpaper path: '/home/XXX/'
 - Can be edited in 'i3/config' file (somewhere in first 30 lines)
-
-# Autorun.sh
-- Located in /h_sys.
-- Script that autoruns always when i3 starts up, related to OS & my laptop (turn off swap, autoupdate, mount partitions..)
-Can be edited / removed in 'i3/config' file (last 30 lines).
 
 # Lock mode (Mod+O)
 Reboot to Windows OS option is connected to 'winreboot' command on my laptop. (script that set ups next boot to Windows 10 and reboots) Recommened to remove this option if you dont have this command. (i3/config -> last 20 lines)
@@ -85,6 +81,7 @@ tty-clock:
 ![Clock](https://github.com/horsecz/i3pc-configs/blob/master/screenshots/clock.png?raw=true)
 
 # Installation
+0) Install all prerequisites and dependencies
 1) Copy i3, polybar & compton.conf to .config folder
-2) Copy active (from wallpaper folder) to Pictures/Wallpapers (or edit config to any other path)
+2) Copy active (from wallpaper folder) to your home folder (or edit config to any other path)
 3) Yaay!

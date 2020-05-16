@@ -1,6 +1,6 @@
 #!/bin/sh
 
-status=$(amixer | cut -d$'\n' -f6 | cut -d'[' -f3 | cut -d']' -f1)
+status=$(amixer | cut -d$'\n' -f5 | cut -d'[' -f4 | cut -d']' -f1)
 
 if [ "$status" = "off" ]; then
 	printf "\rmuted   "
