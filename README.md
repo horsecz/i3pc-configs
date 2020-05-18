@@ -32,7 +32,6 @@ Guess this is version 1.0, somehow stable.
     - time
 
 # Bugs
-- BT status at polybar doesnt work now (TODO someday)
 - BT status on polybar shows 'off' only when BT service is stopped (not BT itself)
 - Absoulte paths & things related to my device-only in configs (recommended to check configs and edit them):
     - RAM @ polybar: script which checks for swap usage has absoulte path to MY swap partition (polybar/swap.sh)
