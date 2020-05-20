@@ -1,6 +1,8 @@
 # i3 polybar & compton configs
-
 - read properly readme in each version
+
+# pkglist
+- List of packages installed on Arch Linux
 
 
 # V1
@@ -10,4 +12,5 @@
 
 # V2
 
+- better and modified version of V1
 - TODO
