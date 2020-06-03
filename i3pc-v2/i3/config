@@ -22,6 +22,9 @@ font pango:monospace 8
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
+# i3 lock - bad shutdown detector
+exec ~/.config/i3/i3lock-d.sh
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -36,7 +39,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 1%+ && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 1%- && $refresh_i3status
 
-bindsym shift+XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 10%- && $refresh_i3status
+bindsym shift+XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 10%+ && $refresh_i3status
 bindsym shift+XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 10%- && $refresh_i3status
 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -247,7 +250,7 @@ for_window [class="^.*"] border pixel 0
 exec ~/.config/i3/batwarning.sh
 
 # autostart autoupdate
-exec i3-msg 'workspace system autoupdater; exec sleep 60 && exec i3-sensible-terminal -e "yay -Syyu --noconfirm"'
+exec i3-msg 'workspace number $ws9; exec sleep 60 && exec i3-sensible-terminal -e "yay -Syyu --noconfirm"'
 
 # bind keys for brightness
 bindsym XF86MonBrightnessDown exec brightnessctl s 1%-

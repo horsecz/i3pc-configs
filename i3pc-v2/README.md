@@ -12,10 +12,17 @@ Everything is same as in version V1 but this has some changes. Recommended to se
 	- fixed move window to another workspace
 	- changed tty-clock style
 	- removed lock mode, aka mod+o
-	- added new action: lock screen -> mod+o locks directly (no need of mod+o)
+	- added new action: lock screen -> mod+l locks directly (no need of mod+o and then l)
 	- new mode at mod+o: show / hide bottom bar
 	- slightly bigger gaps between windows
+	- system autoupdate at startup (60s after bootup) in workspace 9
 	- ...
+- i3lock
+	- locks device with $mod and l
+	- shows count of failed attempts
+	- much stronger blurred display
+	- allowed actions: type password, some fn key actions (touchpad off, sleep, display off, change keyboard backlight), shutdown (via device power button), (tty change, ctrl alt del, ..)
+	- protection: when device is shut down / forced to shut down, next boot i3 locks itself and wont unlock till password is typed
 - polybar
 	- top polybar cleaned, removed:
 		- brightness status
@@ -26,7 +33,7 @@ Everything is same as in version V1 but this has some changes. Recommended to se
 		- hidden by default, can be enabled with mod+o mode
 
 - compton
-	- weaker blur
+	- modified blur strength
 	- stronger dim at inactive windows
 
 # Screenshots
